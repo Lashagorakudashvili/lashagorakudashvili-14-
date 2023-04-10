@@ -1,25 +1,32 @@
 const numberArrays = [2, 4, 6, 8, 10, 12];
-const lastNumber = numberArrays.pop(); // remove the last element and store it in a variable
-numberArrays.unshift(lastNumber); // add the stored last element as the first element
+const lastNumber = numberArrays.pop();
+numberArrays.unshift(lastNumber);
 
-console.log(numberArrays); // output the modified array to the console
+console.log(numberArrays);
 
 
 const products = [
-  { productTitle: 'Product 1', productPrice: 10.99 },
-  { productTitle: 'Product 2', productPrice: 15.99 },
-  { productTitle: 'Product 3', productPrice: 20.99 }
+  {
+    productTitle: 'Title1',
+    productPrice: 25.99
+  },
+  {
+    productTitle: 'Title2',
+    productPrice: 18.50
+  },
+  {
+    productTitle: 'Title3',
+    productPrice: 99.00
+  }
 ];
 
 console.log(products)
 
 
-const numbers = [2, 4, 6, 8, 10];
+const numbers = [10, 23, 45, 18, 7];
 
-let sum = 0;
-for (let i = 0; i < numbers.length; i++) {
-  sum += numbers[i];
-}
+const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+
 const average = sum / numbers.length;
 
 console.log(average);
@@ -33,13 +40,4 @@ const phone = {
   phoneMemoryInGB: 128
 };
 
-console.log(phone);
-
-
-const phone2 = {
-  phoneName: "Samsung Galaxy S21",
-  phonePrice: 999,
-  shopAddresses: ["123 Main St"],
-};
-
-console.log(phone2);
+console.log(`Phone name is (${phone.phoneName}), phone price is (${phone.phonePrice}) and you can buy it at (${phone.shopAddresses[0]})`);
